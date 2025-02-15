@@ -1,0 +1,259 @@
+/* Reset body and html to eliminate top space */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Main container with zero margin at the top */
+.food-container {
+    background-color: #e5f3e3;
+    color: black;
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    max-width: 500px;
+    margin: 0 auto; /* Center horizontally with no vertical margin */
+    position: relative;
+    top: 0;  /* No offset from top */
+}
+
+/* Header section adjustment */
+.food-header {
+    background-image: url('./background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title and description */
+.food-title {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.food-description {
+    font-size: 1.1rem;
+    margin: 20px 0;
+    padding: 0 20px;
+    color: black;
+}
+
+/* File input and button styles */
+.file-input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 85%;
+    max-width: 350px;
+}
+
+/* Buttons */
+.analyze-button,
+.reset-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+    margin: 10px;
+}
+
+.analyze-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.analyze-button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+.analyze-button:disabled {
+    background-color: #dcdcdc;
+    cursor: not-allowed;
+}
+
+.reset-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.reset-button:hover {
+    background-color: #e53935;
+    transform: translateY(-3px);
+}
+
+/* Image preview */
+.image-preview-large {
+    max-width: 100%;
+    max-height: 300px;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Analysis section */
+.analysis-result {
+    background-color: #f0f8ef; /* Lighter shade of the page's background */
+    color: black;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    border: 1px solid #d0e6d1; /* Subtle border to add definition */
+}
+
+
+.result-container {
+    margin-top: 10px;
+}
+
+.result-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.result-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.result-details li {
+    font-size: 1rem;
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+}
+
+.result-details li:before {
+    content: "•";
+    font-size: 1.2rem;
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Original analysis response styling */
+.original-response {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-style: italic;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dot Loader Styles */
+.dot-loader {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot-loader span {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #4caf50; /* Green color for the dots */
+    border-radius: 50%;
+    animation: dot 1.2s infinite ease-in-out;
+}
+
+.dot-loader span:nth-child(1) {
+    animation-delay: -0.24s;
+}
+
+.dot-loader span:nth-child(2) {
+    animation-delay: -0.12s;
+}
+
+.dot-loader span:nth-child(3) {
+    animation-delay: 0s;
+}
+
+@keyframes dot {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .food-container {
+        width: 85%;
+    }
+    
+    .food-header {
+        padding: 50px 15px;
+    }
+    
+    .food-title {
+        font-size: 2rem;
+    }
+
+    .food-description {
+        font-size: 1rem;
+    }
+
+    .file-input {
+        width: 100%;
+    }
+
+    .analyze-button, 
+    .reset-button {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+/* Style for detailed analysis points */
+.analysis-points {
+    list-style-type: none; /* No default list styling */
+    margin: 10px 0 0 0; /* Remove default margins */
+    padding: 0;
+    text-align: left; /* Align everything to the left */
+}
+
+.main-point {
+    margin-top: 10px; /* Add space above each main point */
+    font-size: 1.1rem; /* Slightly larger font for main points */
+    color: #2c3e50; /* Darker color for emphasis */
+}
+
+.sub-point {
+    margin-left: 20px; /* Indent sub-points */
+    font-size: 1rem; /* Standard font size for sub-points */
+    color: #34495e; /* Slightly lighter color */
+}
+
+.regular-point {
+    margin-left: 40px; /* Further indent for additional levels */
+    font-size: 0.95rem; /* Slightly smaller font */
+    color: #7f8c8d; /* Neutral color for extra details */
+}
+

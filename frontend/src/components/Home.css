@@ -1,0 +1,183 @@
+/* General Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+  
+  .home {
+    background-color: #e5f3e3;
+    text-align: center;
+    padding: 20px;
+    width: 85%;
+    max-width: 500px;
+    margin: 0 auto; /* Center horizontally with no vertical margin */
+    position: relative;
+    top: 0;
+  }
+  
+  .home-header {
+    background-image: url('./background.jpg'); /* Add your image path here */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 15px;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .home-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    letter-spacing: 1px;
+  }
+  
+  .home-header .user-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: #16a085;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .top-bar {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+  
+  .home-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    opacity: 0.8;
+  }
+  
+  .inventory-summary {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .inventory-summary h2 {
+    color: #34495e;
+  }
+  
+  .circle-chart {
+    margin: 20px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(
+      #f39c12 0% 25%,
+      #2ecc71 25% 50%,
+      #3498db 50% 75%,
+      #e74c3c 75% 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .item-count {
+    font-size: 32px;
+  }
+  
+  .item-label {
+    font-size: 14px;
+  }
+  
+  .legend {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .legend .dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .others {
+    background-color: #f39c12;
+  }
+  
+  .fruits {
+    background-color: #2ecc71;
+  }
+  
+  .dairy {
+    background-color: #3498db;
+  }
+  
+  .vegetables {
+    background-color: #e74c3c;
+  }
+  
+  .additional-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .info-box {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    max-width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  
+  .info-box h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #34495e;
+  }
+  
+  .info-box img {
+    width: 64px;
+    height: 64px;
+  }
+  
+  @media (max-width: 768px) {
+    .home-header h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .button-card {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .button-card:hover {
+    transform: translateY(-5px);  /* Slight lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
