@@ -36,7 +36,7 @@ prompt = ChatPromptTemplate.from_messages(
 
 # prompt = ChatPromptTemplate.from_template("{input}")
 
-llm = ChatCohere(model="command-r")
+llm = ChatCohere(model="command-r-plus")
 agent = create_cohere_react_agent(llm, tools_list, prompt)
 agent_executor = AgentExecutor(agent=agent, tools=tools_list, verbose=True)
 
